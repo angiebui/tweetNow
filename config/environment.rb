@@ -35,7 +35,7 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 require APP_ROOT.join('config', 'database')
 
 if development?
-  twitter_config = YAML.load(File.read(APP_ROOT.join("config", "application.yml")))
+  twitter_config = YAML.load(File.read(APP_ROOT.join("config", "app.yml")))
   twitter_config.each {|k, v| ENV[k] = v}
 end
 
